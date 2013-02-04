@@ -1,0 +1,7 @@
+% Meeting Request form
+type,x,y,description,id
+text,35,32,Name,name
+text,35,42,Building,building
+text,51,52,Dates of Meeting,dom
+text,51,62,Places of Meeting,pom
+text,57,72,Reason for Attending,rfa
