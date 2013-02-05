@@ -4,7 +4,7 @@ text,37,34,Name,name
 date,140,34,Date,date
 text,37,44,Building,building
 dateinput,51,54,Date of Meeting (Start),doms
-dateinput,55,54,Date of Meeting (End),dome
+dateinput,85,54,Date of Meeting (End),dome
 stringconcat,51,54,doms." - ".dome,dom
 text,51,64,Places of Meeting,pom
 text,57,73,Reason for Attending,rfa
