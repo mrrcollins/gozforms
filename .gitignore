@@ -1,0 +1,3 @@
+*.swp
+.DS_Store
+includes/smarty/templates_c

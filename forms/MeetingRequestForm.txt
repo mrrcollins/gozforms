@@ -1,7 +1,18 @@
 % Meeting Request form
 type,x,y,description,id
-text,35,32,Name,name
-text,35,42,Building,building
-text,51,52,Dates of Meeting,dom
-text,51,62,Places of Meeting,pom
-text,57,72,Reason for Attending,rfa
+text,37,34,Name,name
+date,140,34,Date,date
+text,37,44,Building,building
+dateinput,51,54,Date of Meeting (Start),doms
+dateinput,55,54,Date of Meeting (End),dome
+stringconcat,51,54,doms." - ".dome,dom
+text,51,64,Places of Meeting,pom
+text,57,73,Reason for Attending,rfa
+text,71,108,Approximate Miles,miles
+currencycalculation,147,108,miles*.565,mr
+currency,147,118,Approximate cost of meals ($15 Max),com
+currency,147,132,Cost of registration,cor
+currency,147,141,Motel cost ($75 max - receipts required),mc
+currency,147,156,Parking cost (receipts required),pc
+currencycalculation,147,166,mr+com+cor+mc+pc,tc
+checkbox,35,179,No Sub needed,sn

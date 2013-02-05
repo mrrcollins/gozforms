@@ -1,0 +1,36 @@
+<html>
+<head>
+<title>GozForms</title>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.0/themes/base/jquery-ui.css" />
+  <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
+  <script>
+    $(function(){
+      $(".datepick").datepicker();
+    });
+  </script>
+
+</head>
+<body>
+
+<h1>GozForms - {$formname}</h1>
+<form action="." method=POST>
+<table>
+{foreach $schema as $item}
+  <tr>
+    {if $item.type eq 'text' || $item.type eq 'currency'}
+    <td>{$item.description}:</td><td><input type=text name="return[{$item.id}]" size="76"></td>
+    {elseif $item.type eq 'checkbox'}
+    <td>{$item.description}:</td><td><input type="checkbox" name="return[{$item.id}]" value="X"></td>
+    {elseif $item.type eq 'dateinput'}
+    <td>{$item.description}</td><td><input type="text" name="return[{$item.id}]" class="datepick" id="date_{$item.id}" readonly> </td>
+    {/if}
+  </tr>
+{/foreach}
+    <tr><td>Your email address:</td><td><input type=text name="return[emailfrom]"></td></tr>
+    <tr><td>Send form to:</td><td><input type=text name="return[emailto]"></td></tr>
+</table>
+<input type="submit" value="Send form" name="action">
+</form>
+</body>
+</html>
